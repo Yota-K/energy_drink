@@ -41,11 +41,13 @@ class ChartArea extends React.Component {
         };
 
         const options = {
+            maintainAspectRatio: false,
             scales: {
                 xAxes: [{
                     ticks: {
                         min: 0,
-                        max: 200
+                        max: 200,
+                        stepSize: 50
                     }
                 }]
             }

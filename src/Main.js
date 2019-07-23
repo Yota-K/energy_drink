@@ -55,7 +55,7 @@ class Main extends React.Component {
                 caffeine: 80
             },
             {
-                name: 'みなさまのお墨付きエナジードリンク',
+                name: 'エナジードリンク（西友）',
                 capa:　250,
                 cal: 128,
                 caffeine: 160

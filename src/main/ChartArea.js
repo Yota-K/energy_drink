@@ -49,6 +49,11 @@ class ChartArea extends React.Component {
                         max: 200,
                         stepSize: 50
                     }
+                }],
+                yAxes: [{
+                    ticks: {
+                        fontSize: 10
+                    }
                 }]
             }
         };

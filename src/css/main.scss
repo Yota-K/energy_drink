@@ -1,0 +1,20 @@
+.chart-area {
+    margin: 50px 0;
+    canvas {
+        height: 390px !important;
+    }
+}
+  
+.sort-area {
+    padding: 8px 0;
+    .sort-text {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    #select-box {
+        margin: 20px 0;
+        vertical-align: middle;
+    }
+}

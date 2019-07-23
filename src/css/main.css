@@ -2,18 +2,22 @@
   margin: 50px 0;
 }
 
+.chart-area canvas {
+  height: 390px !important;
+}
+
 .sort-area {
   padding: 8px 0;
 }
 
-.sort-text {
+.sort-area .sort-text {
   font-size: 1.1rem;
   font-weight: bold;
   margin-right: 10px;
   vertical-align: middle;
 }
 
-#select-box {
+.sort-area #select-box {
   margin: 20px 0;
   vertical-align: middle;
 }

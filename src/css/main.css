@@ -1,3 +1,16 @@
+header {
+  position: relative;
+}
+
+header .fa-bars {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
 .chart-area {
   margin: 50px 0;
 }

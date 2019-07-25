@@ -15,6 +15,7 @@ class Header extends React.Component {
                     <Nav.Link href="#red-bull">レッドブル</Nav.Link>
                 </Nav>
                 </Navbar.Collapse>
+                <i class="fa fa-bars"></i>
             </Navbar>
             </header>
         );

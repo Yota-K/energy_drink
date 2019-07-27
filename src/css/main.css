@@ -11,6 +11,31 @@ header .fa-bars {
   cursor: pointer;
 }
 
+#slide-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100vh;
+  background: #fafdfd;
+  border-left: 1px solid #aaa;
+  transform: translateX(500px);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
+}
+
+#slide-nav ul {
+  margin: 100px 0;
+}
+
+#slide-nav ul li {
+  cursor: pointer;
+  line-height: 190%;
+}
+
+.toggle {
+  transform: translateX(0px) !important;
+}
+
 .chart-area {
   margin: 50px 0;
 }

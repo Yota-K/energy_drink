@@ -15,7 +15,7 @@ header .fa-bars {
   position: fixed;
   top: 0;
   right: 0;
-  width: 20%;
+  width: 20vw;
   height: 100vh;
   background: #fafdfd;
   border-left: 1px solid #aaa;
@@ -58,4 +58,13 @@ header .fa-bars {
 .sort-area #select-box {
   margin: 20px 0;
   vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  #slide-nav {
+    width: 55vw;
+  }
+  #slide-nav li {
+    font-size: 0.8rem;
+  }
 }

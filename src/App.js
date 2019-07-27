@@ -84,10 +84,10 @@ class App extends React.Component {
   
   return (
       <div>
-        <SlideNav />
+        <SlideNav data={drink_data} />
         <div id="main">
         <Header />
-        <Main data={drink_data}/>
+        <Main data={drink_data} />
         <Footer />
         </div>
       </div>

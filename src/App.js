@@ -1,9 +1,11 @@
 import React from 'react';
-import './css/main.css';
+import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
 import SlideNav from './SlideNav';
 import Main from './Main';
+import Data from './Data';
 import Footer from './Footer';
+import './css/main.css';
 
 class App extends React.Component {
   render() {
@@ -87,7 +89,10 @@ class App extends React.Component {
         <SlideNav data={drink_data} />
         <div id="main">
         <Header />
-        <Main data={drink_data} />
+        <Switch>
+            <Route exact path="/"　render={() => <Main data={drink_data} />} />
+            <Route exact path="/data" render={() => <Data data={drink_data} />} />
+        </Switch>
         <Footer />
         </div>
       </div>

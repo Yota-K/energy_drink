@@ -9,7 +9,7 @@ class SlideNav extends React.Component {
                     <li><Link to="/">TOP</Link></li>
                     {this.props.data.map((drink) => {
                         return (
-                            <li><Link data-id={drink.id} to="/data">{drink.name}</Link></li>
+                            <li><Link id="link-text" to='/data' onClick={this.props.text}>{drink.name}</Link></li>
                         );
                     })}
                 </ul>

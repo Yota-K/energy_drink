@@ -79,9 +79,10 @@ class TableArea extends React.Component {
                     </tr>
                     </thead>
                     <tbody>
-                    {this.state.data.map((drink) => {
+                    {this.state.data.map((drink,i) => {
                         return (
                             <DrinkTable 
+                                key={i}
                                 name={drink.name}
                                 capa={drink.capa}
                                 cal={drink.cal}

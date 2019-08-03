@@ -6,10 +6,13 @@ class Header extends React.Component {
         super(props);
         this.navToggle = this.navToggle.bind(this);
     }
+    
+    // ナビのボタン
     navToggle() {
         const nav = document.getElementById('slide-nav');
         nav.classList.toggle('toggle');
     }
+
     render() {
         return(
             <header>

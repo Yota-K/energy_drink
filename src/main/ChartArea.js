@@ -9,6 +9,7 @@ class ChartArea extends React.Component {
         };
     }
     render() {
+        // チャートのデータを取得
         const drinkName = this.state.data.map((drink) => {
             return drink.name;
         });
@@ -21,6 +22,7 @@ class ChartArea extends React.Component {
             return Math.round((drink.caffeine / drink.capa) * 100);
         });
 
+        // チャート
         const data = {
             labels: drinkName,
                 datasets: [
@@ -38,7 +40,6 @@ class ChartArea extends React.Component {
                 }
             ]
         };
-
         const options = {
             maintainAspectRatio: false,
             scales: {

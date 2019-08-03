@@ -56,9 +56,9 @@ class TableArea extends React.Component {
 
     render() {
         return(
-            <div class="Table-area">
-                <div class="sort-area">
-                <span class="sort-text">並び変え：</span>
+            <div className="Table-area">
+                <div className="sort-area">
+                <span className="sort-text">並び変え：</span>
                 <select id="select-box" onChange={this.drinkSort}>
                     <option>-</option>
                     <option value="capa_asc">容量（多い順）</option>

@@ -6,7 +6,7 @@ import TableArea from './main/TableArea';
 class Main extends React.Component {
     render() {
         return(
-            <div class="container">
+            <div className="container">
                 <ChartArea data={this.props.data} />
                 <TableArea data={this.props.data} />
             </div>

@@ -8,9 +8,9 @@ class ChartArea extends React.Component {
             data: props.data
         };
     }
-
     render() {
-        const drink_name = this.state.data.map((drink) => {
+        // チャートのデータを取得
+        const drinkName = this.state.data.map((drink) => {
             return drink.name;
         });
 
@@ -18,12 +18,13 @@ class ChartArea extends React.Component {
             return drink.caffeine;
         });
 
-        const caffeine_hundred = this.state.data.map((drink) => {
+        const caffeineHundred = this.state.data.map((drink) => {
             return Math.round((drink.caffeine / drink.capa) * 100);
         });
 
+        // チャート
         const data = {
-            labels: drink_name,
+            labels: drinkName,
                 datasets: [
                 {
                     label: 'カフェインの量',
@@ -33,13 +34,12 @@ class ChartArea extends React.Component {
                 },
                 {
                     label: 'カフェインの量 100mlあたり',
-                    data: caffeine_hundred,
+                    data: caffeineHundred,
                     borderColor: 'rgba(75,192,192,1)',
                     backgroundColor: 'rgba(255,153,0,0.4)'
                 }
             ]
         };
-
         const options = {
             maintainAspectRatio: false,
             scales: {
@@ -57,6 +57,7 @@ class ChartArea extends React.Component {
                 }]
             }
         };
+
         return(
             <div class="chart-area">
                 <HorizontalBar data={data} options={options} />

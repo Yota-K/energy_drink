@@ -33,24 +33,35 @@ header {
     transform: translateX(0px) !important;
 }
 
-.chart-area {
-    margin: 50px 0;
-    canvas {
-        height: 390px !important;
+.container {
+    h2 {
+        margin-top: 30px;
+        font-size: 1.8rem;
     }
-}
-  
-.sort-area {
-    padding: 8px 0;
-    .sort-text {
-        font-size: 1.1rem;
-        font-weight: bold;
-        margin-right: 10px;
-        vertical-align: middle;
+    .chart-area {
+        margin: 50px 0;
+        canvas {
+            height: 390px !important;
+        }
     }
-    #select-box {
-        margin: 20px 0;
-        vertical-align: middle;
+    .sort-area {
+        padding: 8px 0;
+        .sort-text {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        #select-box {
+            margin: 20px 0;
+            vertical-align: middle;
+        }
+    }
+
+    #radar-area {
+        table {
+            margin-top: 50px;
+        }
     }
 }
 

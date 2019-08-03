@@ -6,15 +6,18 @@ class Header extends React.Component {
         super(props);
         this.navToggle = this.navToggle.bind(this);
     }
+    
+    // ナビのボタン
     navToggle() {
         const nav = document.getElementById('slide-nav');
         nav.classList.toggle('toggle');
     }
+
     render() {
         return(
             <header>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
-                <Navbar.Brand href="#home" >エナドリ！</Navbar.Brand>
+                <Navbar.Brand href="/" >Energy Drink</Navbar.Brand>
                 <span id="toggle-btn">
                     <i class="fa fa-bars" onClick={this.navToggle}></i>
                 </span>

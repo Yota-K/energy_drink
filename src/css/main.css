@@ -36,28 +36,37 @@ header .fa-bars {
   transform: translateX(0px) !important;
 }
 
-.chart-area {
+.container h2 {
+  margin-top: 30px;
+  font-size: 1.8rem;
+}
+
+.container .chart-area {
   margin: 50px 0;
 }
 
-.chart-area canvas {
+.container .chart-area canvas {
   height: 390px !important;
 }
 
-.sort-area {
+.container .sort-area {
   padding: 8px 0;
 }
 
-.sort-area .sort-text {
+.container .sort-area .sort-text {
   font-size: 1.1rem;
   font-weight: bold;
   margin-right: 10px;
   vertical-align: middle;
 }
 
-.sort-area #select-box {
+.container .sort-area #select-box {
   margin: 20px 0;
   vertical-align: middle;
+}
+
+.container #radar-area table {
+  margin-top: 50px;
 }
 
 @media (max-width: 600px) {

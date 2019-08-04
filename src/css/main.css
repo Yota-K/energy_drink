@@ -81,6 +81,17 @@ header .fa-bars {
   font-weight: 600;
 }
 
+.container .drink-data p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 110%;
+  margin: 1rem 0;
+}
+
+.container .drink-data p .rank {
+  color: red;
+}
+
 .container #radar-area table {
   margin-top: 50px;
 }
@@ -109,5 +120,8 @@ footer p {
   }
   #slide-nav li {
     font-size: 0.8rem;
+  }
+  .container .drink-data p {
+    font-size: 1rem;
   }
 }

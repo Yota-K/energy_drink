@@ -68,6 +68,15 @@ header {
             text-align: center;
             font-weight: 600;
         }
+        p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 110%;
+            margin: 1rem 0;
+            .rank {
+                color: red;
+            }
+        }
     }
 
     #radar-area {
@@ -99,6 +108,13 @@ footer {
         width: 55vw;
         li {
             font-size: 0.8rem;
+        }
+    }
+    .container {
+        .drink-data {
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }

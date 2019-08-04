@@ -4,7 +4,9 @@ import Table from 'react-bootstrap/Table';
 
 class Data extends React.Component {
     render() {
-        const drink = this.props.data;
+        const drink = this.props.data,
+              drinkCopy_one = Array.from(drink),
+              drinkCopy_two = Array.from(drink);
         
         // クリックされたテキストのオブジェクトを取得
         const target = drink.find((drink) => {
@@ -20,6 +22,28 @@ class Data extends React.Component {
         drinkArray.shift();
         drinkArray.pop();
         drinkArray.splice(4,1);
+
+        // 量のランキング
+        const capaSort = drinkCopy_one.sort((a,b) => {
+            return b.capa - a.capa;
+        });
+
+        const capaArray = capaSort.map((drink) => {
+            return drink.capa;
+        });
+
+        const capaRank = capaArray.indexOf(target.capa) + 1;
+
+        // カフェインのランキング
+        const caffeineSort = drinkCopy_two.sort((a,b) => {
+            return b.caffeine - a.caffeine;
+        })
+
+        const caffeineArray = caffeineSort.map((drink) => {
+            return drink.caffeine;
+        });
+
+        const caffeineRank = caffeineArray.indexOf(target.caffeine) + 1;
 
         // テーブル
         const labelName = ['カロリー','カフェイン','炭水化物','アルギニン','ナイアシン'],
@@ -42,7 +66,7 @@ class Data extends React.Component {
                 label: '成分',
                 data: drinkArray,
                 backgroundColor: [
-                    '#ff4500',
+                    '#90ee90',
                     '#ff7b00',
                     '#ffc21a',
                     '#2996cc',
@@ -58,8 +82,8 @@ class Data extends React.Component {
             <div className="container">
                 <div className="drink-data">
                     <h1>{this.props.clickText}</h1>
-                    <p>量の多さ：/<span>{drink.length}本中</span></p>
-                    <p>カフェインの量：/<span>{drink.length}本中</span></p>
+                    <p>量の多さ：<span className="rank">{capaRank}位</span> / <span>{drink.length}本中</span></p>
+                    <p>カフェインの量：<span className="rank">{caffeineRank}位</span> / <span>{drink.length}本中</span></p>
                 </div>
                 <div id="radar-area">
                 <Pie data={data} />

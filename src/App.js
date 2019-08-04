@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
 import Header from './Header';
 import SlideNav from './SlideNav';
 import Main from './Main';
@@ -41,6 +41,7 @@ class App extends React.Component {
             <Route exact path="/"　render={() => <Main data={copy} />} />
             <Route exact path="/data" render={() => <PieChart data={drinkData} clickText={this.state.clickText} />} />
         </Switch>
+        <Redirect from="/data" to="/" />
         <Footer />
       </div>
     );

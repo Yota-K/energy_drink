@@ -15,6 +15,8 @@ class App extends React.Component {
       clickText: ''
     }
   }
+
+  // クリックした要素を取得
   getText(e) {
     const event = e.target,
            text = event.innerHTML;
@@ -23,6 +25,7 @@ class App extends React.Component {
     });
     return text;
   }
+
   render() {
   return (
       <div>

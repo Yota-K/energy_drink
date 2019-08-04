@@ -3,7 +3,7 @@ import {Route, Switch} from 'react-router-dom';
 import Header from './Header';
 import SlideNav from './SlideNav';
 import Main from './Main';
-import RadarChart from './RadarChart';
+import PieChart from './PieChart';
 import Footer from './Footer';
 import './css/main.css';
 import {drinkData} from './drinkData';
@@ -36,7 +36,7 @@ class App extends React.Component {
         />
         <Switch>
             <Route exact path="/"　render={() => <Main data={drinkData} />} />
-            <Route exact path="/data" render={() => <RadarChart data={drinkData} clickText={this.state.clickText} />} />
+            <Route exact path="/data" render={() => <PieChart data={drinkData} clickText={this.state.clickText} />} />
         </Switch>
         <Footer />
       </div>

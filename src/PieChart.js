@@ -54,8 +54,7 @@ class Data extends React.Component {
         
         return(
             <div className="container">
-                <h1>主な成分</h1>
-                <h2>{this.props.clickText}</h2>
+                <h1>{this.props.clickText}</h1>
                 <div id="radar-area">
                 <Pie data={data} />
                 <Table size="sm" striped bordered hover>

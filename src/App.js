@@ -27,6 +27,9 @@ class App extends React.Component {
   }
 
   render() {
+  // 配列のコピーを作成
+  const copy = Array.from(drinkData);
+  
   return (
       <div>
         <Header />
@@ -35,7 +38,7 @@ class App extends React.Component {
           text={(e) => this.getText(e)}
         />
         <Switch>
-            <Route exact path="/"　render={() => <Main data={drinkData} />} />
+            <Route exact path="/"　render={() => <Main data={copy} />} />
             <Route exact path="/data" render={() => <PieChart data={drinkData} clickText={this.state.clickText} />} />
         </Switch>
         <Footer />

@@ -4,8 +4,10 @@ import Table from 'react-bootstrap/Table';
 
 class Data extends React.Component {
     render() {
+        const drink = this.props.data;
+        
         // クリックされたテキストのオブジェクトを取得
-        const target = this.props.data.find((drink) => {
+        const target = drink.find((drink) => {
             return (drink.name === this.props.clickText)
         });
 
@@ -54,7 +56,11 @@ class Data extends React.Component {
         
         return(
             <div className="container">
-                <h1>{this.props.clickText}</h1>
+                <div className="drink-data">
+                    <h1>{this.props.clickText}</h1>
+                    <p>量の多さ：/<span>{drink.length}本中</span></p>
+                    <p>カフェインの量：/<span>{drink.length}本中</span></p>
+                </div>
                 <div id="radar-area">
                 <Pie data={data} />
                 <Table size="sm" striped bordered hover>

@@ -82,6 +82,18 @@ header .fa-bars {
   margin-top: 50px;
 }
 
+/*footer*/
+footer {
+  background: #343a40;
+  padding: 1rem;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+}
+
+/*responsive*/
 @media (max-width: 1024px) {
   #slide-nav {
     width: 35vw;

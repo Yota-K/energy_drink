@@ -10,39 +10,43 @@ class Data extends React.Component {
         
         // クリックされたテキストのオブジェクトを取得
         const target = drink.find((drink) => {
-            return (drink.name === this.props.clickText)
+            return (drink.name === this.props.clickText);
         });
 
-        // 必要なデータのみを取得
         let drinkArray = [];
 
-        for (let i in target) {
-            drinkArray.push(target[i]);
+        if (typeof target === "object") {
+            // 必要なデータのみを取得
+            for (let i in target) {
+                drinkArray.push(target[i]);
+            }
+            drinkArray.shift();
+            drinkArray.pop();
+            drinkArray.splice(4,1);     
         }
-        drinkArray.shift();
-        drinkArray.pop();
-        drinkArray.splice(4,1);
+        else {
+            window.location.href = "/";
+        }
 
         // 量のランキング
         const capaSort = drinkCopy_one.sort((a,b) => {
             return b.capa - a.capa;
         });
-
         const capaArray = capaSort.map((drink) => {
             return drink.capa;
         });
-
+    
         const capaRank = capaArray.indexOf(target.capa) + 1;
-
+    
         // カフェインのランキング
         const caffeineSort = drinkCopy_two.sort((a,b) => {
             return b.caffeine - a.caffeine;
         })
-
+    
         const caffeineArray = caffeineSort.map((drink) => {
             return drink.caffeine;
         });
-
+    
         const caffeineRank = caffeineArray.indexOf(target.caffeine) + 1;
 
         // テーブル

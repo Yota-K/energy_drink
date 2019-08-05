@@ -41,7 +41,6 @@ class App extends React.Component {
             <Route exact path="/"　render={() => <Main data={copy} />} />
             <Route exact path="/data" render={() => <PieChart data={drinkData} clickText={this.state.clickText} />} />
         </Switch>
-        <Redirect from="/data" to="/" />
         <Footer />
       </div>
     );

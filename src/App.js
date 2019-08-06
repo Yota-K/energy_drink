@@ -1,10 +1,10 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import Header from './Header';
-import SlideNav from './SlideNav';
-import Main from './Main';
-import PieChart from './PieChart';
-import Footer from './Footer';
+import Header from './components/Header';
+import SlideNav from './components/SlideNav';
+import Main from './main/Main';
+import PieChart from './main/PieChart.js';
+import Footer from './components/Footer';
 import './css/main.css';
 import {drinkData} from './drinkData';
 

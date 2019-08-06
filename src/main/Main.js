@@ -1,7 +1,7 @@
 import React from 'react';
-import './css/main.css';
-import ChartArea from './main/ChartArea';
-import TableArea from './main/TableArea';
+import '../css/main.css';
+import ChartArea from './ChartArea';
+import TableArea from './TableArea';
 
 class Main extends React.Component {
     render() {

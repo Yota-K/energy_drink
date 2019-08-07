@@ -83,21 +83,21 @@ class Data extends React.Component {
         }
         
         return(
-            <div className="container">
-                <div className="drink-data">
+            <article className="container">
+                <section id="drink-data">
                     <h1>{this.props.clickText}</h1>
                     <p>量の多さ：<span className="rank">{capaRank}位</span> / <span>{drink.length}本中</span></p>
                     <p>カフェインの量：<span className="rank">{caffeineRank}位</span> / <span>{drink.length}本中</span></p>
-                </div>
-                <div id="radar-area">
+                </section>
+                <section id="radar-area">
                 <Pie data={data} />
                 <Table size="sm" striped bordered hover>
                     <tbody>
                         {drinkData}
                     </tbody>
                 </Table>
-                </div>
-            </div>
+                </section>
+            </article>
         );
     }
 }

@@ -56,7 +56,7 @@ class TableArea extends React.Component {
 
     render() {
         return(
-            <div className="Table-area">
+            <section id="table-area">
                 <div className="sort-area">
                 <span className="sort-text">並び変え：</span>
                 <select id="select-box" onChange={this.drinkSort}>
@@ -92,7 +92,7 @@ class TableArea extends React.Component {
                     })}
                     </tbody>
                 </Table>
-            </div>
+            </section>
         );
     }
 }

@@ -59,9 +59,9 @@ class ChartArea extends React.Component {
         };
 
         return(
-            <div className="chart-area">
+            <section id="chart-area">
                 <HorizontalBar data={data} options={options} />
-            </div>
+            </section>
         );
     }
 }

@@ -34,6 +34,17 @@ header .fa-bars {
   line-height: 190%;
 }
 
+#slide-nav ul li a {
+  color: #343a40;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+#slide-nav ul li a:hover {
+  opacity: 0.6;
+}
+
 .toggle {
   transform: translateX(0px) !important;
 }
@@ -44,35 +55,35 @@ header .fa-bars {
   margin-top: 40px;
 }
 
-.container .chart-area {
+.container #chart-area {
   margin: 50px 0;
 }
 
-.container .chart-area canvas {
+.container #chart-area canvas {
   height: 390px !important;
 }
 
-.container .sort-area {
+.container #table-area .sort-area {
   padding: 8px 0;
 }
 
-.container .sort-area .sort-text {
+.container #table-area .sort-area .sort-text {
   font-size: 1.1rem;
   font-weight: bold;
   margin-right: 10px;
   vertical-align: middle;
 }
 
-.container .sort-area #select-box {
+.container #table-area .sort-area #select-box {
   margin: 20px 0;
   vertical-align: middle;
 }
 
-.container .drink-data {
+.container #drink-data {
   margin: 30px;
 }
 
-.container .drink-data h1 {
+.container #drink-data h1 {
   padding: 0.8rem;
   font-size: 1.8rem;
   background: #dbdbaf;
@@ -81,14 +92,14 @@ header .fa-bars {
   font-weight: 600;
 }
 
-.container .drink-data p {
+.container #drink-data p {
   font-size: 1.4rem;
   font-weight: 600;
   line-height: 110%;
   margin: 1rem 0;
 }
 
-.container .drink-data p .rank {
+.container #drink-data p .rank {
   color: red;
 }
 
@@ -121,7 +132,10 @@ footer p {
   #slide-nav li {
     font-size: 0.8rem;
   }
-  .container .drink-data p {
+  .container #table-area table {
+    font-size: 0.6rem !important;
+  }
+  .container #drink-data p {
     font-size: 1rem;
   }
 }

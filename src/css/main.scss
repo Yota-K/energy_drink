@@ -1,3 +1,5 @@
+$keyColor: #343a40;
+
 /*header*/
 header {
     position: relative;
@@ -27,6 +29,15 @@ header {
         li {
             cursor: pointer;
             line-height: 190%;
+            a {
+                color: $keyColor;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.4s;
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
         }
     }
 }
@@ -39,26 +50,30 @@ header {
 .container {
     padding: 50px 0px;
     margin-top: 40px;
-    .chart-area {
+    // Bar-chart-area
+    #chart-area {
         margin: 50px 0;
         canvas {
             height: 390px !important;
         }
     }
-    .sort-area {
-        padding: 8px 0;
-        .sort-text {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-        #select-box {
-            margin: 20px 0;
-            vertical-align: middle;
+    #table-area {
+        .sort-area {
+            padding: 8px 0;
+            .sort-text {
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+            #select-box {
+                margin: 20px 0;
+                vertical-align: middle;
+            }
         }
     }
-    .drink-data {
+    // Pie-chart-area
+    #drink-data {
         margin: 30px;
         h1 {
             padding: 0.8rem;
@@ -78,7 +93,6 @@ header {
             }
         }
     }
-
     #radar-area {
         table {
             margin-top: 50px;
@@ -88,7 +102,7 @@ header {
 
 /*footer*/
 footer {
-    background: #343a40;
+    background: $keyColor;
     padding: 1rem;
     p {
         color: #fff;
@@ -111,7 +125,12 @@ footer {
         }
     }
     .container {
-        .drink-data {
+        #table-area {
+            table {
+                font-size: 0.6rem !important;
+            }
+        }
+        #drink-data {
             p {
                 font-size: 1rem;
             }

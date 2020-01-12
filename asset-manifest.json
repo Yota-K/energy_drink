@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0fdb11e.chunk.css",
-    "main.js": "/static/js/main.aa849dc5.chunk.js",
-    "main.js.map": "/static/js/main.aa849dc5.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.571f2ade.chunk.js": "/static/js/2.571f2ade.chunk.js",
-    "static/js/2.571f2ade.chunk.js.map": "/static/js/2.571f2ade.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.bf4e3a8e5c9cf4de4c8a6d56b38a3ab2.js": "/precache-manifest.bf4e3a8e5c9cf4de4c8a6d56b38a3ab2.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.a0fdb11e.chunk.css.map": "/static/css/main.a0fdb11e.chunk.css.map"
+    "main.css": "/energy_drink/static/css/main.a0fdb11e.chunk.css",
+    "main.js": "/energy_drink/static/js/main.aa849dc5.chunk.js",
+    "main.js.map": "/energy_drink/static/js/main.aa849dc5.chunk.js.map",
+    "runtime~main.js": "/energy_drink/static/js/runtime~main.07f3d364.js",
+    "runtime~main.js.map": "/energy_drink/static/js/runtime~main.07f3d364.js.map",
+    "static/js/2.62871816.chunk.js": "/energy_drink/static/js/2.62871816.chunk.js",
+    "static/js/2.62871816.chunk.js.map": "/energy_drink/static/js/2.62871816.chunk.js.map",
+    "index.html": "/energy_drink/index.html",
+    "precache-manifest.6db2fec4ed185d5c83f085dd494fd242.js": "/energy_drink/precache-manifest.6db2fec4ed185d5c83f085dd494fd242.js",
+    "service-worker.js": "/energy_drink/service-worker.js",
+    "static/css/main.a0fdb11e.chunk.css.map": "/energy_drink/static/css/main.a0fdb11e.chunk.css.map"
   }
 }

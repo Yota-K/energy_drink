@@ -12,16 +12,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clickText: ''
+        clickText: ''
     }
   }
 
   // クリックした要素を取得
   getText(e) {
     const event = e.target,
-           text = event.innerHTML;
+    text = event.innerHTML;
+
     this.setState({
-      clickText: text
+        clickText: text
     });
     return text;
   }
@@ -38,7 +39,7 @@ class App extends React.Component {
           text={(e) => this.getText(e)}
         />
         <Switch>
-            <Route exact path="/"　render={() => <Main data={copy} />} />
+            <Route exact path="/energy_drink/"　render={() => <Main data={copy} />} />
             <Route exact path="/data" render={() => <PieChart data={drinkData} clickText={this.state.clickText} />} />
         </Switch>
         <Footer />

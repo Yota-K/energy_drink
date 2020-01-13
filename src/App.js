@@ -31,18 +31,6 @@ class App extends React.Component {
     render() {
         // 配列のコピーを作成
         const copy = Array.from(drinkData);
-
-        // 存在しないページにアクセスされたら、リダイレクト
-        const url = window.location.href;
-
-        fetch(url).then((response) => {
-            if (response.status === 404) {
-                window.location.href = '/energy_drink/';
-            }
-        })
-        .catch((response) => {
-            console.log('error');
-        })
       
         return (
             <>

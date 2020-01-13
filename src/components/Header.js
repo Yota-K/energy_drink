@@ -17,7 +17,7 @@ class Header extends React.Component {
         return(
             <header>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
-                <Navbar.Brand href="/" >Energy Drink</Navbar.Brand>
+                <Navbar.Brand href="/energy_drink/" >Energy Drink</Navbar.Brand>
                 <span id="toggle-btn">
                     <i className="fa fa-bars" onClick={this.navToggle}></i>
                 </span>

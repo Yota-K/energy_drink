@@ -6,10 +6,10 @@ class SlideNav extends React.Component {
         return (
             <div id="slide-nav">
                 <ul>
-                    <li><Link to="/">TOP</Link></li>
+                    <li><Link to="/energy_drink/">TOP</Link></li>
                     {this.props.data.map((drink,i) => {
                         return (
-                            <li key={i}><Link id="link-text" to='/data' onClick={this.props.text}>{drink.name}</Link></li>
+                            <li key={i}><Link id="link-text" to='/data/' onClick={this.props.text}>{drink.name}</Link></li>
                         );
                     })}
                 </ul>

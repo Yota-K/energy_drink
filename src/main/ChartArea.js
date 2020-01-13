@@ -1,5 +1,5 @@
 import React from 'react';
-import {HorizontalBar} from 'react-chartjs-2';
+import { HorizontalBar } from 'react-chartjs-2';
 
 class ChartArea extends React.Component {
     constructor(props) {
@@ -40,6 +40,7 @@ class ChartArea extends React.Component {
                 }
             ]
         };
+
         const options = {
             maintainAspectRatio: false,
             scales: {

@@ -121,4 +121,4 @@ const drinkData = [
     }
 ];
 
-export {drinkData};
+export  { drinkData };

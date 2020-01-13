@@ -4,9 +4,9 @@ import Table from 'react-bootstrap/Table';
 
 class Data extends React.Component {
     render() {
-        const drink = this.props.data,
-              drinkCopy_one = Array.from(drink),
-              drinkCopy_two = Array.from(drink);
+        const drink = this.props.data;
+        const capa = Array.from(drink);
+        const caffeine = Array.from(drink);
         
         // クリックされたテキストのオブジェクトを取得
         const target = drink.find((drink) => {
@@ -15,7 +15,7 @@ class Data extends React.Component {
 
         // /dataに直接アクセスされたらトップにリダイレクト
         if (typeof target === 'undefined') {
-            window.location.href = '/';
+            window.location.href = '/energy_drink/';
         }
 
         let drinkArray = [];
@@ -29,7 +29,7 @@ class Data extends React.Component {
         drinkArray.splice(4,1); 
 
         // 量のランキング
-        const capaSort = drinkCopy_one.sort((a,b) => {
+        const capaSort = capa.sort((a,b) => {
             return b.capa - a.capa;
         });
         const capaArray = capaSort.map((drink) => {
@@ -39,7 +39,7 @@ class Data extends React.Component {
         const capaRank = capaArray.indexOf(target.capa) + 1;
     
         // カフェインのランキング
-        const caffeineSort = drinkCopy_two.sort((a,b) => {
+        const caffeineSort = caffeine.sort((a,b) => {
             return b.caffeine - a.caffeine;
         })
     
@@ -50,8 +50,15 @@ class Data extends React.Component {
         const caffeineRank = caffeineArray.indexOf(target.caffeine) + 1;
 
         // テーブル
-        const labelName = ['カロリー','カフェイン','炭水化物','アルギニン','ナイアシン'],
-              drinkData = [];
+        const labelName = [
+            'カロリー', 
+            'カフェイン',
+            '炭水化物',
+            'アルギニン',
+            'ナイアシン'
+        ];
+
+        const drinkData = [];
 
         Object.keys(labelName).forEach((key, index) => {
             drinkData.push(
@@ -66,19 +73,19 @@ class Data extends React.Component {
         const data = {
             labels: labelName,
             datasets: [
-            {
-                label: '成分',
-                data: drinkArray,
-                backgroundColor: [
-                    '#90ee90',
-                    '#ff7b00',
-                    '#ffc21a',
-                    '#2996cc',
-                    '#967acc',
-                    '#29cc44'
-                ],
-                borderWidth: 2,
-            }
+                {
+                    label: '成分',
+                    data: drinkArray,
+                    backgroundColor: [
+                        '#90ee90',
+                        '#ff7b00',
+                        '#ffc21a',
+                        '#2996cc',
+                        '#967acc',
+                        '#29cc44'
+                    ],
+                    borderWidth: 2,
+                }
             ]
         }
         
